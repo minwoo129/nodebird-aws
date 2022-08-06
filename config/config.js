@@ -7,7 +7,6 @@ module.exports = {
       database: "nodebird",
       host: "127.0.0.1",
       dialect: "mysql",
-      port: 3307
     },
     test: {
       username: "root",
@@ -15,7 +14,6 @@ module.exports = {
       database: "nodebird_test",
       host: "127.0.0.1",
       dialect: "mysql",
-      port: 3307
     },
     production: {
       username: "root",
@@ -24,6 +22,5 @@ module.exports = {
       host: "127.0.0.1",
       dialect: "mysql",
       logging: false,
-      port: 3307
     }
   }
