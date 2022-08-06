@@ -7,6 +7,10 @@ const { Post, Hashtag } = require('../models');
 const { isLoggedIn } = require('./middlewares');
 
 const router = express.Router();
+const bodyParser = require('body-parser');
+
+router.use(bodyParser.urlencoded({ extended: false }));
+router.use(bodyParser.json());
 
 try {
     fs.readdirSync('uploads');

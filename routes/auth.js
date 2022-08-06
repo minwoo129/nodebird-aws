@@ -5,6 +5,10 @@ const { isLoggedIn, isNotLoggedIn } = require('./middlewares');
 const User = require('../models/user');
 
 const router = express.Router();
+const bodyParser = require('body-parser');
+
+router.use(bodyParser.urlencoded({ extended: false }));
+router.use(bodyParser.json());
 
 router.post('/join', isNotLoggedIn, async(req, res, next) => {
     const {email, nick, password} = req.body;
